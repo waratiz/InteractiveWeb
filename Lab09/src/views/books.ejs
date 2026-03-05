@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bookstore</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <h1>Book Management</h1>
+
+  <!-- Add Book -->
+  <form method="POST" action="/books">
+    <input type="text" name="bookName" placeholder="Book name" required />
+    <button type="submit">Add</button>
+  </form>
+
+  <br>
+
+  <!-- Search -->
+  <form method="GET" action="/books/search">
+    <input type="text" name="name" placeholder="Search" />
+    <button type="submit">Search</button>
+  </form>
+
+  <h2>Book List</h2>
+
+  <% if (books.length === 0) { %>
+    <p>No books found.</p>
+  <% } %>
+
+ <ul>
+  <% books.forEach(book => { %>
+    <li>
+      <%= book.bookNo %> - <%= book.bookName %>
+
+      <!-- Delete Button -->
+      <form method="POST" action="/books/delete/<%= book.bookNo %>" style="display:inline;">
+        <button type="submit">Delete</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>
+
+  <br>
+  <a href="/">Back Home</a>
+
+</body>
+</html>
