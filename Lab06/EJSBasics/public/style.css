@@ -1,0 +1,55 @@
+
+h1 {
+    padding: 90px 50px;
+    margin-left: 10rem;
+    margin-top: 10px;
+    width: 80%;
+    height: 100px;
+    background-color: lightblue;
+    color: black;
+    border-radius:20px;
+    font-size: 4rem;
+}
+
+nav a.active { font-weight: 700; text-decoration: underline; }
+
+nav {
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    margin-left: 10rem;
+    width: 83.5%;
+    height: 2.5rem;
+    background-color: rgb(252, 158, 158);
+
+    a{
+        margin: 0 5rem;
+        font-size: 1.2rem;
+        color: rgb(170, 65, 70);
+        text-decoration: none;
+
+        
+    }
+
+    a:hover{
+        color: rgb(255, 255, 255);
+    }
+}
+
+ul{
+    margin-left: 10rem;
+
+   li{
+    margin: 30px 0; 
+   }
+}
+
+p,h2{
+    margin-left: 10rem;
+}
+
+footer{
+    margin-top: 3rem;
+    text-align: center;
+    color: blue;
+}
